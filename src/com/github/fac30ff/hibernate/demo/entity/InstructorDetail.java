@@ -1,10 +1,12 @@
 package com.github.fac30ff.hibernate.demo.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -50,10 +52,11 @@ public class InstructorDetail {
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "UnstructorDetail [id=" + id + ", youtubeChannel=" + youtubeChannel + ", hobby=" + hobby + "]";
+		return "InstructorDetail [id=" + id + ", youtubeChannel=" + youtubeChannel + ", hobby=" + hobby
+				 + "]";
 	}
 	
 }
